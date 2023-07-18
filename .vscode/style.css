@@ -31,6 +31,7 @@ body {
   background-position: top center;
   background-size: cover;
   margin-top: 56px;
+  height: 100vh;  /* vh: viewport-height */
 
   /* Simplificação das propriedades acima. "short hand" ou atalho:
       background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
@@ -158,4 +159,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Media queries / mudanças de background conforme o dispositivo */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
